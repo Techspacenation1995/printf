@@ -16,5 +16,10 @@ int (*_select_func(char c))(va_list)
 	if (c == 's')
 		return (_print_str);
 
+	if (c == 'd' || c == 'i')
+		return (_print_int);
+	if (c == 'b')
+		return (_print_bin);
+
 	return (NULL);
 }

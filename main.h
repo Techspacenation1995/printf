@@ -9,5 +9,7 @@ int _print_char(va_list args);
 int _print_str(va_list args);
 int _strlen(char *s);
 int (*_select_func(char c))(va_list);
+int _print_int(va_list args);
+int _print_bin(va_list args);
 
 #endif
