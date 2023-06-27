@@ -11,11 +11,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	char buffer[1024]; /* Local buffer to store the formatted string */
 	int i = 0;
-	int n_display = 0;
-	int buffer_index = 0;  /* Index of the current position in the buffer */
-	char *str;
 	int (*func)(va_list);
 
 	va_start(args, format);
@@ -25,13 +21,11 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
-			n_display++;
 		}
 		else if (format[i + 1] == '%')
 		{
 			i++;
 			_putchar('%');
-			n_display++;
 		}
 		else
 		{
@@ -39,12 +33,11 @@ int _printf(const char *format, ...)
 			if (func != NULL)
 			{
 				func(args);
-				n_display;
 				i++;
 			}
 		}
 		i++;
 	}
 	va_end(args);
-	return (n_display);
+	return (i);
 }
