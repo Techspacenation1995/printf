@@ -16,7 +16,7 @@ int (*_select_func(char c))(va_list)
 	if (c == 's')
 		return (_print_str);
 
-	if (c == 'd' || c == 'i')
+	/** if (c == 'd' || c == 'i')
 		return (_print_int);
 
 	if (c == 'b')
@@ -38,7 +38,7 @@ int (*_select_func(char c))(va_list)
 		return (_print_exclusive_string);
 
 	if (c == 'p')
-		return (_print_pointers);
+		return (_print_pointers); **/
 
 	return (NULL);
 }
