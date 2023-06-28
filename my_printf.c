@@ -10,8 +10,9 @@
 int _printf(const char *format, ...)
 {
 	unsigned int i = 0, r_value = 0, r_val_str;
-	char * str;
+	char *str;
 	va_list args;
+
 	va_start(args, format);
 
 	for (; format[i] != '\0'; i++)
@@ -23,13 +24,14 @@ int _printf(const char *format, ...)
 		else if (format[i + 1] == 'c')
 		{
 			char c = va_arg(args, int);
+
 			_putchar(c);
 			i++;
 		}
 		else if (format[i + 1] == 's')
 		{
 			str = va_arg(args, char *);
-			r_val_str =_print_str(str);
+			r_val_str = _print_str(str);
 			i++;
 			r_value += r_val_str - 1;
 		}

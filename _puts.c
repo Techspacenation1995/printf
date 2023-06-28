@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _print_str - A function that writes a character to stdoutput
- * @c: character argument
+ * _print_str - A function that print a string to the standard output
+ * @s: a pointer to a string
  *
  * Return: A charter to the screen
  */
@@ -20,5 +20,5 @@ int _print_str(char *s)
 			i++;
 		}
 	}
-	return(r_val);
+	return (r_val);
 }
