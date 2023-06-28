@@ -1,15 +1,14 @@
 #ifndef MAIN_H
 #define MAIN_H
+
+/* C standard library header file */
 #include <stdarg.h>
+#include <unistd.h>
 #include <stdio.h>
 
-int _printf(const char *format, ...);
+/* function prototype */
 int _putchar(char c);
-int _print_char(va_list args);
-int _print_str(va_list args);
-int _strlen(char *s);
-int (*_select_func(char c))(va_list);
-int _print_int(va_list args);
-int _print_bin(va_list args);
+int _printf(const char *format, ...);
+int _print_str(char *s);
 
-#endif
+#endif /* MAIN_H */
