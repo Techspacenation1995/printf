@@ -27,5 +27,5 @@ int _print_int(int num)
 	_print_int(n);
 	_putchar((num % 10) + '0');
 
-	return(r_val);
+	return (r_val);
 }
