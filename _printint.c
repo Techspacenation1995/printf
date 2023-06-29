@@ -16,6 +16,12 @@ int _print_int(int num)
 		return (1);
 	}
 
+	if (num < 0)
+	{
+		_putchar('-');
+		num = -num;
+	}
+
 	n = num / 10;
 
 	_print_int(n);
