@@ -46,6 +46,16 @@ int _printf(const char *format, ...)
 			i++;
 			r_value += r_val_int;
 		}
+		else if (format[i + 1] == 'b')
+		{
+			_print_bin(va_arg(args, unsigned int));
+			i++;
+		}
+		else if (format[i + 1] == 'u')
+		{
+			_print_unsigned(va_arg(args, unsigned int));
+			i++;
+		}
 		r_value += 1;
 	}
 	return (r_value);
