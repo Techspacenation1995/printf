@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, r_value = 0, r_val_str;
+	unsigned int i = 0, r_value = 0, r_val_str, r_val_int;
 	char *str;
 	va_list args;
 
@@ -39,6 +39,12 @@ int _printf(const char *format, ...)
 		{
 			_putchar('%');
 			i++;
+		}
+		else if (format[i + 1] == 'd' || format[i + 1] == 'i')
+		{
+			r_val_int = _print_int(va_arg(args, int));
+			i++;
+			r_value += r_val_int;
 		}
 		r_value += 1;
 	}

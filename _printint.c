@@ -9,7 +9,17 @@
 
 int _print_int(int num)
 {
-	int i = 0, r_val = 0;
+	int r_val = 0, n;
+
+	if (num == 0)
+	{
+		return (1);
+	}
+
+	n = num / 10;
+
+	_print_int(n);
+	_putchar((num % 10) + '0');
 
 	return(r_val);
 }
